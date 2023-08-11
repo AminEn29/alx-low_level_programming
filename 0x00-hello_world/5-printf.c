@@ -1,6 +1,8 @@
 #include <stdio.h>
 /**
-*The main fuction run,Return 0 with success
+* main - entry point
+*
+* Return: always 0 (Success)
 */
 int main(void)
 {
