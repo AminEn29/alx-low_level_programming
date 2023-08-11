@@ -1,4 +1,4 @@
-#include <stiod.h>
+#include <stdio.h>
 
 /**
 * main - main function
