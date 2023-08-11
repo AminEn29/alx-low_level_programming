@@ -2,7 +2,7 @@
 
 int main()
 {
-	char amine[] = "Programming is like building a multilingual puzzle";
+	char amine[] = ("\"Programming is like building a multilingual puzzle\n");
 	
 	puts(amine);
 	
