@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- *main is the entry of the function, that write what printf
+ * main - Print the statement
  *
- *return 0 - in success
+ * Return: Always 0.
 */
 int main(void)
 {
