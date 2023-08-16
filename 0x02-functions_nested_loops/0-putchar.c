@@ -1,11 +1,21 @@
 #include <stdio.h>
+
 /**
- * main - Print the statement
+ * main - Entry point
  *
- * Return: Always 0.
+ * Description: prints _putchar using putchar prototype
+ *
+ * Return: Always 0 (Success)
 */
+
 int main(void)
 {
-printf("_putchar\n");
-return (0);
+	char str[] = "_putchar";
+	int ch;
+
+	for (ch = 0; ch < 8; ++ch)
+		putchar(str[ch]);
+	putchar('\n');
+
+	return (0);
 }
