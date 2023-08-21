@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-/*the main fuction of the program */
-
-int rest_to_98(void)
+void rest_to_98()
 {
-    int n  , *ptr = &n;
+    int n;
+    int *ptr = &n;
     *ptr= 98;
-    return (0);
+    printf("n=%d\n", *ptr);
 }
