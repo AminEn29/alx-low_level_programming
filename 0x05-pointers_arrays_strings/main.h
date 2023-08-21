@@ -4,7 +4,7 @@
 
 void reset_to_98(int *n);
 void swap_int(int *a, int *b);
-int strlen(char *s);
+int _strlen(char *s);
 void put(char *str);
 void print_rev(char *s);
 void re_string(char *s);
