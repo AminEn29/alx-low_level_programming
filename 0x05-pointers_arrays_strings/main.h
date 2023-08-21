@@ -1,8 +1,7 @@
 #include <stdio.h>
 
-void rest_to_98(int *)
+void rest_to_98(int *n)
 {
-    int n;
-    int *ptr = &n;
+    int *ptr = n;
     *ptr= 98;
 }
