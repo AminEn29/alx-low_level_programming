@@ -21,4 +21,3 @@
     /* Print a new line */
 	_putchar('\n');
 }
-
