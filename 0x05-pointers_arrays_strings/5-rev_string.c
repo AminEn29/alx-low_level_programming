@@ -1,7 +1,11 @@
 #include "main.h"
+/**
+* rev_string - function that reverse a string
+* @s: parametre of the function
+*/
 
 
-void re_string(char *s)
+void rev_string(char *s)
 {
 		int i, len = 0;
 
