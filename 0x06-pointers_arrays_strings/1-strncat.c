@@ -4,7 +4,7 @@
 * @dest: isthe distination source
 * @src: is the txt that will addd to dest
 * @n: how much charatare will type
-* Return: des
+* Return: return pointer dest
 */
 char *_strncat(char *dest, char *src, int n)
 {
