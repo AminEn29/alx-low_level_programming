@@ -14,10 +14,7 @@ void reverse_array(int *a, int n)
 	{
 		temp = *p1;
 		*p1 = *p2;
-		while (*p2 = temp)
-		{
+		*p2 = temp)
 			p1++;
 			p2--;
-		}
 	}
-}
