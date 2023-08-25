@@ -3,6 +3,9 @@
 /**
 * _strcat - the function that that concatenates two strings
 * i@: & j@: is used for conte the number of character
+* @dest: is the destination source
+* @src: is the text that will copie
+* Return: pointer
 */
 
 char *_strcat(char *dest, char *src)
