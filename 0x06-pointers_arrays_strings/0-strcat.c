@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 /**
-* *_strcat - the function that that concatenates two strings
-*
+* _strcat - the function that that concatenates two strings
+* i@: & j@: is used for conte the number of character
 */
 
 char *_strcat(char *dest, char *src)
