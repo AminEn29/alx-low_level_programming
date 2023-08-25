@@ -6,14 +6,25 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	if (s1 > s2) {
-		printf("15\n");
+	int i, j;
+
+	for (i = 0; s1[i] != '\0'; i++)
+	;
+	for (j = 0; s2[j] != '\0'; j++)
+	;
+	if (s1 > s2)
+	{
+		return (15);
 	}
-	else 
+	else
 	{
 		if (s1 < s2)
-		printf("-15\n");
+		{
+			return (-15);
+		}
 		else
-		printf("0\n");
+		{
+			return (0);
+		}
 	}
 }
