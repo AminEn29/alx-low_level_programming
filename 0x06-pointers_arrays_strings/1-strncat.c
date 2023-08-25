@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 /**
 * _strncat - function that concatenates according to n
 * @dest: isthe distination source
@@ -10,19 +10,11 @@ char *_strncat(char *dest, char *src, int n)
 {
 	int i, j;
 
-	for (i = 0; dest[i] != '\0', i++)
+	for (i = 0; dest[i] != '\0'; i++)
 	;
-	for (j = 0; src[j] != '\0', j++)
-	if (n > j)
-	{
-		dest[i + j] = src[j];
-		dest[i] = '\0';
-	}
-	else
-	{
-			dest[i + n] = src[n];
-			dest[i] = '\0';
-	}
+	for (j = 0; j < n && src[j] != '\0'; j++)
+	dest[i + j] = src[j];
+	dest[i + j] = '\0';
+
 	return (dest);
 }
-
