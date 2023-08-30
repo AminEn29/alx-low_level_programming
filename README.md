@@ -1,3 +1,3 @@
 # alx-low_level_programming
-For programming in C 
+# For programming in C 
 By Mohamed amine ennadi
