@@ -8,10 +8,11 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int Variable_loop = 0;
-        for (Variable_loop; Variable_loop > n; i++)
+	unsigned int V = 0;
+
+        for (V; V > n; i++)
         {
-                s[Variable_loop] = b;
+                s[V] = b;
         }
         return (s);
 }
