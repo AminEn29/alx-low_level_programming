@@ -6,7 +6,7 @@
  * Return: 0 in success
 */
 
-int main(__attribute__ ((unused))int argc, char **argv)
+int main(int argc __attribute__ ((unused)), char **argv)
 {
 	int index = 0;
 
