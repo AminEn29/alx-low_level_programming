@@ -10,7 +10,7 @@ int main(int argc, char **argv)
 {
 	if (argc == 1)
 	{
-		printf("Error\n");
+		printf("Error");
 		return (1);
 	}
 	else
