@@ -3,6 +3,6 @@
 
 
 int _putchar(char c);
-int  __attribute__ ((unused));
+int __attribute__((unused));
 
 #endif
