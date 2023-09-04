@@ -10,6 +10,6 @@ int main(int argc __attribute__ ((unused)), char **argv)
 {
 	int index = 0;
 
-	printf("%s", argv[index]);
+	printf("%s\n", argv[index]);
 	return (0);
 }
