@@ -6,7 +6,7 @@
  * @max: is the max of array
  * Return: pointer
  * NULL if @min: > @max:
- * NULL if insufisable memory
+ * NULL if insufisable
 */
 
 int *array_range(int min, int max)
@@ -18,13 +18,13 @@ int *array_range(int min, int max)
 		return (NULL);
 
 	e = (max - min) + 1;
-	pointer = malloc(sizeof(int) * e);
+	pointer = malloc(sizeof(int) * (max - min + 1));
 
 	if (pointer == NULL)
 		return (NULL);
 
 	for (j = 0; j < e; j++)
-		pointer[j] = min++;
+		pointer[j] = min + j;
 
 	return (pointer);
 }
