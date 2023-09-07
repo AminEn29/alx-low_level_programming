@@ -4,7 +4,9 @@
  * array_range - function that creat an array of string
  * @min: minimum of array
  * @max: is the max of array
- * Return: success
+ * Return: pointer
+ * NULL if @min: > @max:
+ * NULL if insufisable memory
 */
 
 int *array_range(int min, int max)
