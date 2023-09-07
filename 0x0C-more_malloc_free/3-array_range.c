@@ -13,13 +13,13 @@ int *array_range(int min, int max)
 	int *pointer;
 
 	if (min > max)
-		return ('\0');
+		return (NULL);
 
 	e = (max - min) + 1;
 	pointer = malloc(sizeof(int) * e);
 
 	if (pointer == NULL)
-		return ('\0');
+		return (NULL);
 
 	for (j = 0; j < e; j++)
 		pointer[j] = min + j;
