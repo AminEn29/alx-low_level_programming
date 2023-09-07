@@ -3,7 +3,7 @@
 /**
  * malloc_checked - is function that allocates memory using
  * @b: is the paramter
- * Return: 0 in success
+ * Return: pointer
 */
 
 void *malloc_checked(unsigned int b)
@@ -15,6 +15,5 @@ void *malloc_checked(unsigned int b)
 	{
 		exit(98);
 	}
-	else
 		return (pointer);
 }
