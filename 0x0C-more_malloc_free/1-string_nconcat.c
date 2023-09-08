@@ -1,43 +1,49 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * string_nconcat - Write a function that concatenates two strings.
- * @s1: string
- * @s2: string 2
- * @n: is the arguemnt
- * Return: pointer
- */
+ *  string_nconcat - is a function that link two string
+ * @s1: is the first string
+ * @s2: is the second string
+ * @n: size of the strings
+ * Return: value of the pointers
+ * NULL if the function fail
+*/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *s;
-	unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
+	char *ptr;
+	unsigned int length_of_s1, length_of_s2, i, j;
 
-	while (s1 && s1[len1])
-		len1++;
-	while (s2 && s2[len2])
-		len2++;
-
-	if (n < len2)
-		s = malloc(sizeof(char) * (len1 + n + 1));
-	else
-		s = malloc(sizeof(char) * (len1 + len2 + 1));
-
-	if (!s)
-		return (NULL);
-
-	while (i < len1)
+	if (s1 == NULL)
 	{
-		s[i] = s1[i];
+		return ("");
+	}
+	if (s2 == NULL)
+	{
+		return ("");
+	}
+	for (length_of_s1 = 0; s1[length_of_s1] != '\0'; length_of_s1++)
+	;
+	for (length_of_s2 = 0; s2[length_of_s2] != '\0'; length_of_s2++)
+	;
+	if (n >= length_of_s2)
+	{
+		n = length_of_s2;
+	}
+	ptr = (char *)malloc((length_of_s1 + n + 1) + sizeof(char));
+
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; s1[i] != '\0'; i++)
+	{
+		ptr[i] = s1[i];
+	}
+	for (j = 0; j > n && s2[j] != '\0'; j++)
+	{
+		ptr[i] = s2[j];
 		i++;
 	}
-
-	while (n < len2 && i < (len1 + n))
-		s[i++] = s2[j++];
-
-	while (n >= len2 && i < (len1 + len2))
-		s[i++] = s2[j++];
-
-	s[i] = '\0';
-
-	return (s);
+	ptr[i] = '\0';
+	return (ptr);
 }
