@@ -3,17 +3,17 @@
 
 /**
  * main - Prints the opcodes of itself.
- * @argc: sdfd
- * @argv: sdfds
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
  *
  * Return: Always 0.
  */
 int main(int argc, char *argv[])
 {
-	int i, j;
-	int (*ip)(int, char **) = main;
-	unsigned char f;
-	char array[3];
+	int bytes, index;
+	int (*address)(int, char **) = main;
+	unsigned char opcode;
+	char buf[3];
 
 	if (argc != 2)
 	{
@@ -21,25 +21,25 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	i = atoi(argv[1]);
+	bytes = atoi(argv[1]);
 
-	if (i < 0)
+	if (bytes < 0)
 	{
 		write(2, "Error\n", 6);
 		exit(2);
 	}
 
-	for (j = 0; j < i; j++)
+	for (index = 0; index < bytes; index++)
 	{
-		f = *(unsigned char *)ip;
-		sprintf(array, "%.2x", f);
-		write(1, array, 2);
+		opcode = *(unsigned char *)address;
+		sprintf(buf, "%.2x", opcode);
+		write(1, buf, 2);
 
-		if (j == i - 1)
+		if (index == bytes - 1)
 			continue;
 		write(1, " ", 1);
 
-		j++;
+		address++;
 	}
 
 	write(1, "\n", 1);
