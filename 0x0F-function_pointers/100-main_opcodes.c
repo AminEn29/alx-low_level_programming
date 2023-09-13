@@ -1,10 +1,10 @@
+#include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 
 /**
  * main - Prints the opcodes of itself.
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of pointers to the arguments.
+ * @argc: The numbsuppli program.
+ * @argv: An aments.
  *
  * Return: Always 0.
  */
@@ -13,11 +13,10 @@ int main(int argc, char *argv[])
 	int bytes, index;
 	int (*address)(int, char **) = main;
 	unsigned char opcode;
-	char buf[3];
 
 	if (argc != 2)
 	{
-		write(2, "Error\n", 6);
+		printf("Error\n");
 		exit(1);
 	}
 
@@ -25,23 +24,23 @@ int main(int argc, char *argv[])
 
 	if (bytes < 0)
 	{
-		write(2, "Error\n", 6);
+		printf("Error\n");
 		exit(2);
 	}
 
 	for (index = 0; index < bytes; index++)
 	{
 		opcode = *(unsigned char *)address;
-		sprintf(buf, "%.2x", opcode);
-		write(1, buf, 2);
+		printf("%.2x", opcode);
 
-		if (index != bytes - 1)
-			write(1, " ", 1);
+		if (index == bytes - 1)
+			continue;
+		printf(" ");
 
 		address++;
 	}
 
-	write(1, "\n", 1);
+	printf("\n");
 
 	return (0);
 }
