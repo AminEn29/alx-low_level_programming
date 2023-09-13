@@ -1,11 +1,12 @@
 #include <function_pointers.h>
 /**
- * int_index - function that search for integer
- * @array:am
- * @size:am
- * @cmp: am
- * Return: the integer
-*/
+ * int_index - Searches for an integer in an array.
+ * @array: The array.
+ * @size: The size of the array.
+ * @cmp: Pointer to the function used to compare values.
+ * Return: The index of the first element for '
+ * which the cmp function does not return 0.
+ */
 int int_index(int *array, int size, int (*cmp)(int))
 {
 int for_loop = 0;
@@ -22,6 +23,7 @@ int for_loop = 0;
 	{
 		if (cmp(array[for_loop] == 1))
 			return (for_loop);
+		for_loop++;
 	}
 		return (-1);
 }
