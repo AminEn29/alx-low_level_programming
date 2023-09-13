@@ -35,9 +35,8 @@ int main(int argc, char *argv[])
 		sprintf(buf, "%.2x", opcode);
 		write(1, buf, 2);
 
-		if (index == bytes - 1)
-			continue;
-		write(1, " ", 1);
+		if (index != bytes - 1)
+			write(1, " ", 1);
 
 		address++;
 	}
