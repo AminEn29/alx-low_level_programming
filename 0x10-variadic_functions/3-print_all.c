@@ -1,5 +1,5 @@
 #include <stdarg.h>
-#include <stdio.h>
+#include "variadic_functions.h"
 
 void print_all(const char * const format, ...)
 {
@@ -17,25 +17,25 @@ void print_all(const char * const format, ...)
         {
             case 'c':
                 c = va_arg(args, int);
-                printf("%c", c);
+                _putchar(c);
                 break;
 
             case 'i':
                 i = va_arg(args, int);
-                printf("%d", i);
+                print_number(i);
                 break;
 
             case 'f':
                 f = va_arg(args, double); // float arguments are promoted to double in va_arg
-                printf("%f", f);
+                print_float(f);
                 break;
 
             case 's':
                 str = va_arg(args, char *);
                 if (str == NULL)
-                    printf("(nil)");
+                    print_string("(nil)");
                 else
-                    printf("%s", str);
+                    print_string(str);
                 break;
 
             default:
@@ -43,11 +43,11 @@ void print_all(const char * const format, ...)
         }
 
         if ((format[i + 1]) && (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's'))
-            printf(", ");
+            _putchar(',');
 
         i++;
     }
 
     va_end(args);
-    printf("\n");
+    _putchar('\n');
 }
