@@ -20,5 +20,6 @@ int sum_them_all(const unsigned int n, ...)
 	{
 		sum += va_arg(accesslist, int);
 	}
+	va_end(accesslist);
 	return (sum);
 }
