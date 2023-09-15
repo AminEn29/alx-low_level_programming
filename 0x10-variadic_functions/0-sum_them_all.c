@@ -1,5 +1,4 @@
 #include <variadic_functions.h>
-#include <stdlib.h>
 /**
  * sum_them_all - is function that return a sum of all it's parametre
  * @n:is the number of arrgument
@@ -10,7 +9,7 @@ int sum_them_all(const unsigned int n, ...)
 	int j;
 	int sum = 0;
 
-	if (n == NULL)
+	if (n == 0)
 		return (0);
 	va_list accesslist;
 
