@@ -7,19 +7,18 @@
 */
 int sum_them_all(const unsigned int n, ...)
 {
-	  int j;
 	unsigned int sum = 0;
 
 	if (n == 0)
 		return (0);
-	va_list accesslist;
+	va_list number;
 
-	va_start(accesslist, n);
+	va_start(number, n);
 
-	for (int j; j < n; j++)
+	for (unsigned int  j; j < n; j++)
 	{
-		sum += va_arg(accesslist, int);
+		sum += va_arg(number, int);
 	}
-	va_end(accesslist);
+	va_end(number);
 	return (sum);
 }
