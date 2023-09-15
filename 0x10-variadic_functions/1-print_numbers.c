@@ -9,26 +9,22 @@
 */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int j = 0;
+	unsigned int j;
 	va_list sizelist;
 
-	if (separator == NULL)
-		return (0);
-
 	va_start(sizelist, n);
-	while (j < n)
+
+	for (j = 0; j < n; j++)
 	{
 		int number = va_arg(sizelist, int);
 
 		printf("%d", number);
-		if (j >= n - 1)
-		{
-			break;
-		}
-		printf("%s", separator);
-		j++;
+
+		if (separator != NULL && j != n - 1)
+			printf("%s", separator);
 	}
+
 	printf("\n");
 	va_end(sizelist);
-
 }
+
