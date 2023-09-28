@@ -2,7 +2,7 @@
 /**
  *  _strlen_recursion - function done the length of a sting
  *  @s: is the pointer inside there is a value
- *  Return: lenght
+ *  Return: lenght of it
 */
 int _strlen_recursion(char *s)
 {

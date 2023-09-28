@@ -2,7 +2,7 @@
 /**
  *  _sqrt_recursion - function that return the naturel squar root
  * @n: is the number
- * Return: the root
+ * Return: the result
 */
 int _sqrt_recursion(int n)
 {

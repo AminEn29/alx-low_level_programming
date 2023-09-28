@@ -2,7 +2,7 @@
 /**
  *  _puts_recursion - is a function that print a sting and return to line
  *  @s: is the pointer
- * Return: the new line
+ * Return: \n
 */
 
 void _puts_recursion(char *s)

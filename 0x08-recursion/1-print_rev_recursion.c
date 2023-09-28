@@ -2,6 +2,7 @@
 /**
  *  _print_rev_recursion - print a string in reverse
  *  @s: is the pointer that has the value
+ * dont return nothing
 */
 
 
