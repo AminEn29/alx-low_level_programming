@@ -16,13 +16,19 @@ int _sqrt_recursion(int n)
 	}
 	else
 	{
-		return (find_largest_smaller_square(1, 1, n));
+		return (find_for_me(1, 1, n));
 	}
 }
-
-int find_largest_smaller_square(int i, int result, int x)
+/**
+ * find_for_me - hi find the number squar that = n
+ * @i:is the number taht we start 1, but int final he is the root
+ * @result: here in the final need to give us the n
+ * @x: is the number given by the exercise
+ * Return: the root
+*/
+int find_for_me(int i, int result, int x)
 {
 	if (result > x)
 		return (i - 1);
-	return (find_largest_smaller_square(i + 1, (i + 1) * (i + 1), x));
+	return (find_for_me(i + 1, (i + 1) * (i + 1), x));
 }
