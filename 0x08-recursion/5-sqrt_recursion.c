@@ -16,13 +16,13 @@ int _sqrt_recursion(int n)
 	}
 	else
 	{
-		return find_largest_smaller_square(1, 1, n);
+		return (find_largest_smaller_square(1, 1, n));
 	}
 }
 
-int find_largest_smaller_square(int i, int result, int x) {
-    if (result > x) {
-        return i - 1;
-    }
-    return find_largest_smaller_square(i + 1, (i + 1) * (i + 1), x);
+int find_largest_smaller_square(int i, int result, int x)
+{
+	if (result > x)
+		return (i - 1);
+	return (find_largest_smaller_square(i + 1, (i + 1) * (i + 1), x));
 }
