@@ -6,7 +6,8 @@
 */
 int _sqrt_recursion(int n)
 {
-	int x = n;
+	int j = n;
+	int stupid = 0;
 
 	if (n == 1 || n == 0)
 	{
@@ -18,10 +19,17 @@ int _sqrt_recursion(int n)
 	}
 	else
 	{
-		while (x * x - n > 0)
-		{
-			x = 0.5 * (x + n / x);
-		}
+		return sprt_h(n, j, stupid);
 	}
-	return (x);
+}
+
+int sprt_h(int s, int x, int stupid)
+{
+    int new_x = 0.5 * (x + s / x);
+
+    if (x * x - s < stupid * stupid) {
+        return x;
+    }
+
+    return sprt_h(s, new_x, stupid);
 }
