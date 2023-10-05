@@ -7,15 +7,16 @@
 */
 char *_strdup(char *str)
 {
-	int i = 0;
+	int i, j = 0;
+	char *space;
 
 	if (str == NULL)
 		return (NULL);
 	while (str[i] != '\0')
 		i++;
-	char *space = (char *)malloc(1 * (i + 1));
+	space = (char *)malloc(1 * (i + 1));
 
-	for (int j = 0; j <= i; j++)
+	for (j = 0; j <= i; j++)
 		space[j] = str[j];
 	return (space);
 }
