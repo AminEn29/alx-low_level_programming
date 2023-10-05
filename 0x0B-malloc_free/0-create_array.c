@@ -8,13 +8,15 @@
 */
 char *create_array(unsigned int size, char c)
 {
+	int j = 0;
+	char *space;
+
 	if (size == 0)
 		return (0);
-	char *space = malloc(1 * size);
-
+	space = malloc(1 * size);
 	if (space == 0)
 		return (0);
-	for (int j = 0; j < size; j++)
+	for (j = 0; j < size; j++)
 	{
 		space[j] = c;
 	}
