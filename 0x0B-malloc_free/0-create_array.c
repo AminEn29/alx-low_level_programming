@@ -8,14 +8,14 @@
 */
 char *create_array(unsigned int size, char c)
 {
-	int j = 0;
+	unsigned int j = 0;
 	char *ar;
 
 	if (size == 0)
-		return (0);
+		return (NULL);
 	ar = (char *)malloc(1 * size);
-	if (ar == 0)
-		return (0);
+	if (ar == NULL)
+		return (NULL);
 	for (j = 0; j < size; j++)
 	{
 		ar[j] = c;
