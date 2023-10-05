@@ -12,6 +12,10 @@ char *str_concat(char *s1, char *s2)
 	int e, k;
 	char *space;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	if (s1 &&  s2 == NULL)
 		return (NULL);
 	while (s1[i] != '\0')
