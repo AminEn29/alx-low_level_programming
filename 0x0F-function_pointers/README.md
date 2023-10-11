@@ -1,1 +1,0 @@
-# Fucntion With pointer
