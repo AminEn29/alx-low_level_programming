@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * add_node - is the function that add new nodes
+ * add_node - how to add a new node
  * @str: is the paramter
  * @head: is the head of node
  * Return: Head
