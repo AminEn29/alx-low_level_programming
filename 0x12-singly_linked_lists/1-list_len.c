@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * list_len - is function that print number of elements
+ * list_len - is function that print number
  * @h: is the pointer
  * Return: the number of elements
 */
