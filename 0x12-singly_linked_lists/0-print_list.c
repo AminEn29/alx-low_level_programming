@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * print_list - linked list that print all the element
+ * print_list - linked list that print all the element in the data
  * @h: is the pointer
  * Return: the number of nodes
 */
